@@ -1,8 +1,23 @@
 import { AppProps } from 'next/app';
-import '../styles/globals.css';
+import Head from 'next/head';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+import GlobalStyles from 'styles/global';
 
-export default MyApp;
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <>
+      <Head>
+        <title>Full Remote BR - Vagas totalmente remotas</title>
+        <link rel="manifest" href="/manifest.json" />
+        <meta
+          name="description"
+          content="Uma plataforma de vagas remotas de Front End e Back End"
+        />
+      </Head>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </>
+  );
+};
+
+export default App;
