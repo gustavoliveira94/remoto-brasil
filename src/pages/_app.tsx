@@ -7,13 +7,11 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>React Avançado - Boilerplate</title>
-        <link rel="shotrtcut icon" href="/img/icon-512.png" />
-        <link rel="apple-touch-icon" href="/img/icon-512.png" />
+        <title>Full Remote BR - Vagas totalmente remotas</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
+          content="Uma plataforma de vagas remotas de Front End e Back End"
         />
       </Head>
       <GlobalStyles />
