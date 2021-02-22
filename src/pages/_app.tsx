@@ -6,7 +6,7 @@ import GlobalStyles from 'styles/global';
 const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
-      <title>Full Remote BR - Vagas totalmente remotas</title>
+      <title>Remoto Brasil - Vagas totalmente remotas</title>
       <link rel="manifest" href="/manifest.json" />
       <meta
         name="description"

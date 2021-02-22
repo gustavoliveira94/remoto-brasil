@@ -22,6 +22,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'max-len': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/jsx-filename-extension': [
@@ -29,6 +30,7 @@ module.exports = {
       {
         extensions: [
           '.tsx',
+          '.ts',
         ],
       },
     ],
@@ -46,6 +48,8 @@ module.exports = {
       'error',
     ],
     'react/react-in-jsx-scope': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'react/prop-types': 'off',
   },
   settings: {
     'import/resolver': {
