@@ -49,7 +49,7 @@ const Home: React.FC = () => {
         </div>
         <div className="cards">
           {repos.map((repo) => (
-            <div className="card">
+            <div className="card" data-testid="card" key={repo.name}>
               <h3>{repo.name}</h3>
               <img src={repo.avatar_url} alt={repo.name} />
               <Link href="#"><a>Ver vagas</a></Link>

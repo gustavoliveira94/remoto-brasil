@@ -76,18 +76,6 @@ export const Indicate = styled.div`
     box-shadow: rgb(255, 255, 255, 0.6);
     animation: pulse 2s infinite;
 
-    @-webkit-keyframes pulse {
-      0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
-      }
-      70% {
-          -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-      }
-      100% {
-          -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-      }
-    }
-
     @keyframes pulse {
       0% {
         -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
