@@ -111,6 +111,11 @@ export const Indicate = styled.div`
 `;
 
 export const Repositories = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   div {
     display: flex;
     align-items: center;
@@ -137,11 +142,12 @@ export const Repositories = styled.div`
 
   .cards {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     height: auto;
     padding: 20px;
+    max-width: 910px;
 
     .card {
       display: flex;
