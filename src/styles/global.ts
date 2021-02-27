@@ -9,7 +9,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html, body, #__next {
-    min-height: 100%;
+    min-height: 100vh;
+    position: relative;
     -webkit-font-smoothing: antialiased;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Canterell, 'Open Sans', 'Helvetica Neue', sans-serif;
