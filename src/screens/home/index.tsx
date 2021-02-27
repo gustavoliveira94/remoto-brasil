@@ -2,25 +2,24 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
 
-import { HomeContext } from 'pages/index';
+import { ReposContext } from 'contexts/ReposProvider';
 
 import {
-  Head, About, Indicate, Repositories,
+  About, Indicate, Repositories,
 } from 'styles/home';
 
 const Home: React.FC = () => {
-  const repos = useContext(HomeContext);
+  const { repos } = useContext(ReposContext);
 
   return (
     <>
-      <Head>
-        <Link href="/">
-          <a>
-            <h1>{'<REMOTO BRASIL />'}</h1>
-          </a>
-        </Link>
-      </Head>
       <About>
+        <div>
+          <button type="button">
+            <i className="fas fa-code-branch" />
+            <p>Sobre</p>
+          </button>
+        </div>
         <div>
           <span>README.md</span>
           <h2>SOBRE A REMOTO BRASIL</h2>
@@ -52,7 +51,7 @@ const Home: React.FC = () => {
             <div className="card" data-testid="card" key={repo.name}>
               <h3>{repo.name}</h3>
               <img src={repo.avatar_url} alt={repo.name} />
-              <Link href="#"><a>Ver vagas</a></Link>
+              <Link href={`/repo/${repo.login}`}><a>Ver vagas</a></Link>
             </div>
           ))}
         </div>

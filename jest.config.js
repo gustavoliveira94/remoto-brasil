@@ -9,5 +9,6 @@ module.exports = {
     '^utils/(.*)$': '<rootDir>/src/utils/$1',
     '^styles/(.*)$': '<rootDir>/src/styles/$1',
     '^screens/(.*)$': '<rootDir>/src/screens/$1',
+    '^contexts/(.*)$': '<rootDir>/src/contexts/$1',
   },
 };
