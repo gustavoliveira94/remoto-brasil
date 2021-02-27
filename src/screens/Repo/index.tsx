@@ -12,8 +12,6 @@ const Repo: React.FC = () => {
   const { query } = router;
 
   const nameRepo = repos.filter((repo) => repo.login === query.slug);
-  const remoteOk = jobs.map((job) => job.labels.filter((j) => j.name.includes('Remoto')));
-  const filterLabel = jobs.filter((job, index) => job.state === 'open' && remoteOk[index].length === 1);
 
   return (
     <>
@@ -29,7 +27,7 @@ const Repo: React.FC = () => {
         </h2>
       </Info>
       <Jobs>
-        {filterLabel.map((job) => (
+        {jobs.map((job) => (
           <div className="job" key={job.title}>
             <p className="title">{job.title}</p>
             <div className="labels">
