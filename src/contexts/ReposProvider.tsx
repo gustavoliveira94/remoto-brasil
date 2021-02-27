@@ -12,9 +12,19 @@ interface Repo {
   login: string
 }
 
+interface Label {
+  name: string
+}
+
+interface Jobs {
+  state: string,
+  title: string,
+  labels: Array<Label>
+}
+
 interface Context {
   repos: Array<Repo>,
-  jobs: []
+  jobs: Array<Jobs>
 }
 
 export const ReposContext = createContext<Context>({ repos: [{ name: '', avatar_url: '', login: '' }], jobs: [] });
@@ -31,9 +41,10 @@ const ReposProvider: React.FC = ({ children }) => {
       request.get('users/remoto-brasil'),
       request.get('users/react-brasil'),
       request.get('users/frontendbr'),
+      request.get('users/backend-br'),
     ]);
 
-    const repositories = [data[0]?.data, data[1]?.data, data[2]?.data];
+    const repositories = [data[0]?.data, data[1]?.data, data[2]?.data, data[3]?.data];
 
     return setRepos(repositories);
   };
