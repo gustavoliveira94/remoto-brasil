@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports['rendering elements 1'] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 40px 30px;
+}
+
+.c0 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+}
+
+.c0 div button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 140px;
+  height: 35px;
+  background-color: #FFFFFF;
+  border: 1px solid #B5B5B5;
+  border-radius: 5px;
+  color: #24292E;
+}
+
+.c0 div button i {
+  margin-right: 10px;
+}
+
+.c0 div:nth-child(2) {
+  display: block;
+  max-width: 900px;
+  border: 1px solid #B5B5B5;
+  border-radius: 5px;
+  padding: 10px;
+  height: auto;
+}
+
+.c0 div:nth-child(2) span {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.c0 div:nth-child(2) h2 {
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.c0 div:nth-child(2) p {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  background-color: #24292E;
+}
+
+.c1 a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: 360px;
+  height: 58px;
+  background-color: #24292E;
+  border: 0.5px solid #FFFFFF;
+  border-radius: 5px;
+  font-family: 'Sora',sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: rgb(255,255,255,0.6);
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+.c1 a:hover {
+  opacity: 0.8;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+}
+
+.c2 div button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 140px;
+  height: 35px;
+  background-color: #FFFFFF;
+  border: 1px solid #B5B5B5;
+  border-radius: 5px;
+  color: #24292E;
+}
+
+.c2 div button i {
+  margin-right: 10px;
+}
+
+.c2 .cards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 20px;
+  max-width: 910px;
+}
+
+.c2 .cards .card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 270px;
+  height: 270px;
+  background: #FFFFFF;
+  border: 1px solid #B5B5B5;
+  border-radius: 5px;
+  margin: 0 10px 10px 10px;
+}
+
+.c2 .cards .card h3 {
+  font-weight: 600;
+}
+
+.c2 .cards .card img {
+  width: 170px;
+  height: 170px;
+  margin: 10px 0;
+}
+
+.c2 .cards .card a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 245px;
+  height: 30px;
+  border: 1px solid #B5B5B5;
+  border-radius: 5px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #24292E;
+}
+
+.c2 .cards .card:hover {
+  box-shadow: 0px 1px 4px 4px rgb(0 0 0 / 10%);
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div>
+      <button
+        type="button"
+      >
+        <i
+          class="fas fa-code-branch"
+        />
+        <p>
+          Sobre
+        </p>
+      </button>
+    </div>
+    <div>
+      <span>
+        README.md
+      </span>
+      <h2>
+        SOBRE A REMOTO BRASIL
+      </h2>
+      <hr />
+      <p>
+        Olá, sejam bem vindos ao
+         
+        <b>
+          Remoto Brasil
+        </b>
+        .
+         
+        <br />
+        Essa iniciativa tem o objetivo de unir repositórios do Github que divulgam vagas na área de programação e filtrar somente as que são REMOTAS. Sintam-se à vontade para indicar novos repositórios de divulgação de vagas no botão abaixo.
+      </p>
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <a
+      href="https://github.com/remoto-brasil/repositorios-de-vagas"
+      rel="noreferrer"
+      target="_blank"
+    >
+      Tem algum repositório para indicar?
+    </a>
+  </div>
+  <div
+    class="c2"
+  >
+    <div>
+      <button
+        type="button"
+      >
+        <i
+          class="fas fa-code-branch"
+        />
+        <p>
+          Organizações
+        </p>
+      </button>
+    </div>
+    <div
+      class="cards"
+    >
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <h3 />
+        <img
+          alt=""
+          src=""
+        />
+        <a
+          href="/repo"
+        >
+          Ver vagas
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
