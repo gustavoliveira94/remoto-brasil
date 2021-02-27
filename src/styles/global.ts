@@ -4,16 +4,16 @@ const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    outline: 0;
   }
 
   html, body, #__next {
-    height: 100%
-  }
-
-  body: {
+    min-height: 100vh;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Canterell, 'Open Sans', 'Helvetica Neue', sans-serif
+    Ubuntu, Canterell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 `;
 
