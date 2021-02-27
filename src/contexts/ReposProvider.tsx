@@ -52,7 +52,7 @@ const ReposProvider: React.FC = ({ children }) => {
   const fetchJobs = async () => {
     const { query } = router;
 
-    const { data } = await request.get(`repos/${query.slug}/vagas/issues?per_page=50&state=open&labels=Remoto`);
+    const { data } = await request.get(`repos/${query.slug}/vagas/issues?per_page=50&state=open`);
 
     return setJobs(data);
   };
