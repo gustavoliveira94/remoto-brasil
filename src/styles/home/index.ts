@@ -105,9 +105,10 @@ export const Indicate = styled.div`
 
 export const Repositories = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  min-height: calc(100vh - 559px);
 
   div {
     display: flex;

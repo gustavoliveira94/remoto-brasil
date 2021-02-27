@@ -20,7 +20,7 @@ export const Info = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 140px;
+      width: 180px;
       height: 35px;
       background-color: #FFFFFF;
       border: 1px solid #B5B5B5;
@@ -40,5 +40,41 @@ export const Info = styled.div`
 
 export const Jobs = styled.div`
   width: 100%;
-  height: calc(100vh - 275px);
+  min-height: calc(100vh - 275px);
+  padding: 30px;
+  padding: 10px 0;
+
+  .job {
+    cursor: pointer;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafbfc;
+    padding: 20px;
+    margin-bottom: 10px;
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .labels {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      p {
+        margin: 0 5px;
+        background-color: #24292E;
+        color: #fff;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: 12px;
+      }
+    }
+  }
 `;
