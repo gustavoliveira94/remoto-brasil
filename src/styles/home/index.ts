@@ -135,7 +135,7 @@ export const Repositories = styled.div`
 
   .cards {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     height: auto;
