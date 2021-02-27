@@ -23,6 +23,18 @@ export const Header = styled.header`
 export const Footer = styled.footer`
   width: 100%;
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 45px;
+  background-color: #24292E;
+
+  p {
+    text-align: center;
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+  }
 `;
