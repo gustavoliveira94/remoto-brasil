@@ -19,22 +19,45 @@ interface Label {
 interface Jobs {
   state: string,
   title: string,
+  created_at: Date,
+  number: Number,
   labels: Array<Label>
+}
+
+interface Job {
+  title: string,
+  body: string
 }
 
 interface Context {
   repos: Array<Repo>,
-  jobs: Array<Jobs>
+  jobs: Array<Jobs>,
+  job: Job,
 }
 
-export const ReposContext = createContext<Context>({ repos: [{ name: '', avatar_url: '', login: '' }], jobs: [] });
+export const ReposContext = createContext<Context>({
+  repos: [{
+    name: '', avatar_url: '', login: '',
+  }],
+  jobs: [],
+  job: { title: '', body: '' },
+});
 
 const ReposProvider: React.FC = ({ children }) => {
   const router = useRouter();
+  const { query } = router;
 
   const [repos, setRepos] = useState<Array<Repo>>([]);
   const [jobs, setJobs] = useState<[]>([]);
-  const [route, setRoute] = useState<string | string[] | undefined>(router.query.slug);
+  const [job, setJob] = useState<Job>({ title: '', body: '' });
+  const [route, setRoute] = useState<string | string[] | undefined>(query.slug);
+  const [id, setId] = useState<string | string[] | undefined>(query.id);
+
+  const fetchJob = async () => {
+    const { data } = await request.get(`repos/${query.slug}/vagas/issues/${query.id}`);
+
+    setJob(data);
+  };
 
   const fetchRepos = async () => {
     const data = await Promise.all([
@@ -50,8 +73,6 @@ const ReposProvider: React.FC = ({ children }) => {
   };
 
   const fetchJobs = async () => {
-    const { query } = router;
-
     const { data } = await request.get(`repos/${query.slug}/vagas/issues?per_page=50&state=open`);
 
     return setJobs(data);
@@ -64,9 +85,14 @@ const ReposProvider: React.FC = ({ children }) => {
   }, [repos]);
 
   useEffect(() => {
-    const { query, route: routeName } = router;
+    const { route: routeName } = router;
 
-    if ((route !== query.slug) && routeName === '/repo/[slug]') {
+    if ((id !== query.id) && routeName === '/job/[slug]/[id]') {
+      setId(query.id);
+      fetchJob();
+    }
+
+    if ((route !== query.slug) && routeName === '/jobs/[slug]') {
       setRoute(query.slug);
       fetchJobs();
     }
@@ -74,7 +100,7 @@ const ReposProvider: React.FC = ({ children }) => {
   }, [router]);
 
   return (
-    <ReposContext.Provider value={{ repos, jobs }}>
+    <ReposContext.Provider value={{ repos, jobs, job }}>
       {children}
     </ReposContext.Provider>
   );
