@@ -41,8 +41,12 @@ export const Info = styled.div`
 export const Jobs = styled.div`
   width: 100%;
   min-height: calc(100vh - 275px);
-  padding: 30px;
   padding: 10px 0;
+
+  a {
+    text-decoration: none;
+    color: #24292E;
+  }
 
   .job {
     cursor: pointer;
@@ -60,6 +64,10 @@ export const Jobs = styled.div`
       text-align: center;
       margin-bottom: 20px;
       font-weight: 600;
+
+      span {
+        font-weight: 400;
+      }
     }
 
     .labels {
@@ -74,6 +82,7 @@ export const Jobs = styled.div`
         padding: 4px;
         border-radius: 5px;
         font-size: 12px;
+        margin-bottom: 5px;
       }
     }
   }
