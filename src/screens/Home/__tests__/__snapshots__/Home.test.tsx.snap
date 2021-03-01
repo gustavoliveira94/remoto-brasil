@@ -356,7 +356,7 @@ exports['rendering elements 1'] = `
           width="170"
         />
         <a
-          href="/repo"
+          href="/jobs"
         >
           Ver vagas
         </a>

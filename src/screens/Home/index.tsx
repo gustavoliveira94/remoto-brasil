@@ -51,7 +51,7 @@ const Home: React.FC = () => {
             <div className="card" data-testid="card" key={repo.name}>
               <h3>{repo.name}</h3>
               <img src={repo.avatar_url} alt={repo.name} width="170" height="170" />
-              <Link href={`/repo/${repo.login}`}><a>Ver vagas</a></Link>
+              <Link href={`/jobs/${repo.login}`}><a>Ver vagas</a></Link>
             </div>
           ))}
         </div>
