@@ -11,11 +11,12 @@ const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <title>Remoto Brasil - Vagas totalmente remotas!</title>
-      <link rel="manifest" href="/manifest.json" />
+      {/* <link rel="manifest" href="/manifest.json" /> */}
       <meta
         name="description"
-        content="Uma plataforma de vagas remotas de Front End e Back End"
+        content="Remoto Brasil - Uma plataforma de vagas remotas de Front End e Back End"
       />
+      <meta name="keywords" content="remoto, home-office, home office, front end, back end, front-end, back-end, vagas remotas" />
     </Head>
     <ReposProvider>
       <GlobalStyles />
