@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
+import moment from 'moment';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
-import { Info, Jobs } from 'styles/repo';
+import { Info, Jobs } from 'styles/jobs';
 
 import { ReposContext } from 'contexts/ReposProvider';
+
+moment.locale('pt-br');
 
 const Repo: React.FC = () => {
   const router = useRouter();
@@ -30,12 +34,22 @@ const Repo: React.FC = () => {
       </Info>
       <Jobs>
         {filterLabel.map((job) => (
-          <div className="job" key={job.title}>
-            <p className="title">{job.title}</p>
-            <div className="labels">
-              {job.labels.map((j) => <p>{j.name}</p>)}
-            </div>
-          </div>
+          <Link href={`/job/${query.slug}/${job.number}`} key={job.title}>
+            <a>
+              <div className="job">
+                <p className="title">
+                  {job.title}
+                  {' '}
+                  -
+                  {' '}
+                  <span>{`(${moment(job.created_at).fromNow()})`}</span>
+                </p>
+                <div className="labels">
+                  {job.labels.map((j) => <p>{j.name}</p>)}
+                </div>
+              </div>
+            </a>
+          </Link>
         ))}
       </Jobs>
     </>
