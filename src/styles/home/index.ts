@@ -152,14 +152,14 @@ export const Repositories = styled.div`
       border: 1px solid #B5B5B5;
       border-radius: 5px;
       margin: 0 10px 10px 10px;
+      width: 270px;
+      height: 270px;
 
       h3 {
         font-weight: 600;
       }
 
       img {
-        width: 170px;
-        height: 170px;
         margin: 10px 0;
       }
 
