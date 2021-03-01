@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Repo from 'screens/Repo';
+import Repo from 'screens/Jobs';
 
 import Layout from 'components/Layout';
 

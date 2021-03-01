@@ -9,6 +9,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html, body, #__next {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     position: relative;
     -webkit-font-smoothing: antialiased;
