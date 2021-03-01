@@ -62,6 +62,7 @@ export const Indicate = styled.div`
   align-items: center;
   width: 100%;
   height: 130px;
+  padding: 0 20px;
   background-color: #24292E;
 
   a {
@@ -147,8 +148,6 @@ export const Repositories = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 270px;
-      height: 270px;
       background: #FFFFFF;
       border: 1px solid #B5B5B5;
       border-radius: 5px;
