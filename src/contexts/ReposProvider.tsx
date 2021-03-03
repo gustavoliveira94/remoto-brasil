@@ -13,10 +13,12 @@ interface Repo {
 }
 
 interface Label {
-  name: string
+  name: string,
+  id: string
 }
 
 interface Jobs {
+  id: string,
   state: string,
   title: string,
   created_at: Date,
@@ -65,15 +67,17 @@ const ReposProvider: React.FC = ({ children }) => {
       request.get('users/react-brasil'),
       request.get('users/frontendbr'),
       request.get('users/backend-br'),
+      request.get('users/vuejs-br'),
+      request.get('users/dotnetdevbr'),
     ]);
 
-    const repositories = [data[0]?.data, data[1]?.data, data[2]?.data, data[3]?.data];
+    const repositories = data.map((repository) => repository.data);
 
     return setRepos(repositories);
   };
 
   const fetchJobs = async () => {
-    const { data } = await request.get(`repos/${query.slug}/vagas/issues?per_page=50&state=open`);
+    const { data } = await request.get(`repos/${query.slug}/vagas/issues?per_page=100&state=open`);
 
     return setJobs(data);
   };
