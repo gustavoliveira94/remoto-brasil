@@ -7,6 +7,15 @@ export const Header = styled.header`
   width: 100%;
   height: 50px;
   background-color: #24292E;
+  position: sticky;
+  top: 0;
+
+  i {
+    color: #FFFFFF;
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+  }
 
   a {
     text-decoration: none;

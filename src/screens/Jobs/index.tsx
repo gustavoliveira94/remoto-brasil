@@ -34,7 +34,7 @@ const Repo: React.FC = () => {
       </Info>
       <Jobs>
         {filterLabel.map((job) => (
-          <Link href={`/job/${query.slug}/${job.number}`} key={job.title}>
+          <Link href={`/job/${query.slug}/${job.number}`} key={job.id}>
             <a>
               <div className="job">
                 <p className="title">
@@ -45,7 +45,7 @@ const Repo: React.FC = () => {
                   <span>{`(${moment(job.created_at).fromNow()})`}</span>
                 </p>
                 <div className="labels">
-                  {job.labels.map((j) => <p>{j.name}</p>)}
+                  {job.labels.map((j) => <p key={j.id}>{j.name}</p>)}
                 </div>
               </div>
             </a>
