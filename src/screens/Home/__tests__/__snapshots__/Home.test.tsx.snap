@@ -348,15 +348,17 @@ exports['rendering elements 1'] = `
         class="card"
         data-testid="card"
       >
-        <h3 />
+        <h3>
+          .NET Dev Brasil
+        </h3>
         <img
-          alt=""
+          alt=".NET Dev Brasil"
           height="170"
-          src=""
+          src="https://avatars.githubusercontent.com/u/60519084?v=4"
           width="170"
         />
         <a
-          href="/jobs"
+          href="/jobs/dotnetdevbr"
         >
           Ver vagas
         </a>
