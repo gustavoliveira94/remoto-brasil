@@ -6,6 +6,12 @@ import { useRouter } from 'next/router';
 
 import request from 'utils/request';
 
+interface Repo {
+  name: string,
+  avatar_url: string,
+  login: string
+}
+
 interface Label {
   name: string,
   id: string
@@ -26,11 +32,15 @@ interface Job {
 }
 
 interface Context {
+  repos: Array<Repo>,
   jobs: Array<Jobs>,
   job: Job,
 }
 
 export const ReposContext = createContext<Context>({
+  repos: [{
+    name: '', avatar_url: '', login: '',
+  }],
   jobs: [],
   job: { title: '', body: '' },
 });
@@ -39,6 +49,7 @@ const ReposProvider: React.FC = ({ children }) => {
   const router = useRouter();
   const { query } = router;
 
+  const [repos, setRepos] = useState<Array<Repo>>([]);
   const [jobs, setJobs] = useState<[]>([]);
   const [job, setJob] = useState<Job>({ title: '', body: '' });
   const [route, setRoute] = useState<string | string[] | undefined>(query.slug);
@@ -50,11 +61,32 @@ const ReposProvider: React.FC = ({ children }) => {
     setJob(data);
   };
 
+  const fetchRepos = async () => {
+    const data = await Promise.all([
+      request.get('users/remoto-brasil'),
+      request.get('users/react-brasil'),
+      request.get('users/frontendbr'),
+      request.get('users/backend-br'),
+      request.get('users/vuejs-br'),
+      request.get('users/dotnetdevbr'),
+    ]);
+
+    const repositories = data.map((repository) => repository.data);
+
+    return setRepos(repositories);
+  };
+
   const fetchJobs = async () => {
     const { data } = await request.get(`repos/${query.slug}/vagas/issues?per_page=100&state=open`);
 
     return setJobs(data);
   };
+
+  useEffect(() => {
+    if (!repos.length) {
+      fetchRepos();
+    }
+  }, [repos]);
 
   useEffect(() => {
     const { route: routeName } = router;
@@ -72,7 +104,7 @@ const ReposProvider: React.FC = ({ children }) => {
   }, [router]);
 
   return (
-    <ReposContext.Provider value={{ jobs, job }}>
+    <ReposContext.Provider value={{ repos, jobs, job }}>
       {children}
     </ReposContext.Provider>
   );
